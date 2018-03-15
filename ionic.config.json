@@ -1,0 +1,15 @@
+{
+  "name": "projetcordo",
+  "app_id": "490ed4db",
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
