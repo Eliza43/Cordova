@@ -7,10 +7,6 @@
 angular.module('starter', ['ionic', 'starter.controllers'])
 
   .run(function ($ionicPlatform) {
-
-		Pro.init('490ed4db', {
-		appVersion: '0.0.1'
-		});
 	
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -37,58 +33,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'AppCtrl'
       })
 
-      .state('app.mediapicker', {
-        url: '/mediapicker',
+      .state('app.touch', {
+        url: '/touch',
         views: {
           'menuContent': {
-            templateUrl: 'templates/mediapicker.html',
-            controller: 'mediaCtrl'
-          }
-        }
-      })
-
-      .state('app.vibrate', {
-        url: '/vibrate',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/vibrate.html',
-            controller: 'vibrateCtrl'
-          }
-        }
-      })
-
-
-      .state('app.geoloc', {
-        url: '/geoloc',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/geoloc.html',
-            controller: 'geolocCtrl'
-          }
-        }
-      })
-
-      .state('app.mail', {
-        url: '/mail',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/mail.html',
-            controller: 'mailCtrl'
-          }
-        }
-      })
-
-      .state('app.contact', {
-        url: '/contact',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/contact.html',
-            controller: 'contactCtrl'
+            templateUrl: 'templates/touch.html',
+            controller: 'touchCtrl'
           }
         }
       });
 
 
+
+
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/mediapicker');
+    $urlRouterProvider.otherwise('/app/touch');
   });
